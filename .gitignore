@@ -1,0 +1,6 @@
+/target
+*.tar.gz
+*sqlite*
+secrets.sh
+__pycache__
+lightningcss*

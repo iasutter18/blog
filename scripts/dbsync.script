@@ -1,0 +1,4 @@
+#!/bin/bash
+source scripts/secrets.sh
+
+./mac-sqlite3_rsync blog.sqlite "${USER_HOST}":"${HOST_ROOT}"/blog.sqlite --exe "${HOST_ROOT}"/sqlite3_rsync

@@ -1,0 +1,4 @@
+[default]
+
+[default.databases]
+blog = { url = "blog.sqlite" }

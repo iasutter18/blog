@@ -1,0 +1,97 @@
+/* Global CSS not to include in external sheet */
+:root {
+    --mw-px: 800px;
+    --main-font: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+    --nav-font1: 'Bahnschrift', 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    --nav-font2: system-ui, sans-serif;
+}
+html {
+    scrollbar-gutter: stable;
+}   
+* {box-sizing: border-box;}
+body {
+    font-family: var(--main-font);
+    background-color: rgb(245, 245, 245);
+    font-size: 1em;
+    margin: 0;
+}
+main :not( h1,h2,h3,h4,h5,h6 ){
+    line-height: 1.5;
+}
+main, footer {
+    max-width: var(--mw-px);
+    padding: 1em;
+    margin: auto;
+}
+main *:not(:has(img)) {
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+main img {
+    width: 100%;
+    max-width: var(--mw-px);
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+main h1,h2,h3,h4,h5,h6 {
+    text-align: center;
+}
+body > nav > ul {
+    display: flex;
+    flex-flow: wrap;
+    column-gap: 10px;
+    row-gap: 5px;
+    padding-left: 0;
+    margin: 0;
+}
+body > nav > ul > li {
+    display: inline;
+    padding-left: 0;
+}
+body > nav > ul > li:last-of-type {
+    margin-left: auto;
+    color: rgb(20,255,20);
+}
+body > nav > ul > li:last-of-type > a {
+    border-top: 1px dotted black;
+}
+nav {
+    border-bottom: 2px solid rgba(245, 245, 245, 0.25);
+    border-radius: 0 0 5px 5px;
+    background: rgba(247, 247, 247, 0.75);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    position: sticky;
+    top: 0;
+    margin: auto;
+    font-family: var(--nav-font1);  
+    font-weight: 700;
+    padding: .5em;
+    max-width: var(--mw-px);
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.25);
+}
+nav a {
+    text-decoration: none;
+    color: rgba(0,0,0, 0.9);
+    display: inline-block;
+}
+nav a:hover, nav a#home-navlink {
+    color: darkred;
+}
+#navbackdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: var(--mw-px);
+    overflow: hidden;
+    height: 25px;
+}
+p:not(:last-of-type) {
+    margin-bottom: 1.75em;
+}
+/* Move below to external sheet */
+  

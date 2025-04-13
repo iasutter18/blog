@@ -1,0 +1,14 @@
+[Unit]
+Description=Blog web server
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/www/markasutter.com/public
+ExecStart=/var/www/markasutter.com/public/blog
+User=www-data
+Group=www-data
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

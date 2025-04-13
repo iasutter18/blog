@@ -1,0 +1,6 @@
+#!/bin/bash
+sudo systemctl stop blog.service
+tar --overwrite -xzvf blog.tar.gz
+sudo systemctl start blog.service
+rm blog.tar.gz
+

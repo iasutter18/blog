@@ -1,0 +1,4 @@
+#!/bin/bash
+source scripts/secrets.sh
+
+rsync -rzdP static/img/ "${USER_HOST}":"${HOST_ROOT}"/static/img

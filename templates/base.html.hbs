@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page.title}}</title>
+    <style>{{> style}}</style>
+    {{!-- Comment that includes {{fakevar}} --}}
+    {{! <link rel="stylesheet" href="/static/style.min.css?v=1.0.0&dev=000"> }}
+</head>
+<body>
+    {{> navbar}}
+    <main>
+        {{#if error}}
+            {{> 404}}
+        {{else}}
+            {{{page.html}}}
+        {{/if}}
+    </main>
+    <footer id="footer">
+        <hr>
+        <p>Nothing to see here....</p>
+    </footer>
+    <script defer src="/static/animations.js?v=1.0.0&dev=011"></script>
+    <iframe src="https://static.markasutter.com/static/analytics_pixel.html"
+        width="0" height="0"
+    ></iframe>
+</body>
+</html>

@@ -1,0 +1,5 @@
+#!/bin/bash
+source scripts/secrets.sh
+
+scp blog.tar.gz "${USER_HOST}":"${HOST_ROOT}"
+rm blog.tar.gz

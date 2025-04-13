@@ -1,0 +1,23 @@
+[package]
+name = "blog"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+markdown = "1.0.0-alpha.23"
+rocket = "0.5.1"
+serde = { version = "1.0", features = ["derive"] }
+
+[dependencies.rocket_dyn_templates]
+version = "0.2.0"
+features = ["handlebars"]
+
+[dependencies.rocket_sync_db_pools]
+version = "0.1.0"
+features = ["sqlite_pool"]
+
+# Linux stuff
+[workspace.metadata.cross.target.x86_64-unknown-linux-gnu]
+pre-build = [
+    "apt-get update && apt-get --assume-yes install libsqlite3-dev"
+]
