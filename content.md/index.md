@@ -1,8 +1,8 @@
 # Hello, World!!!
 
-<a href="https://commons.wikimedia.org/wiki/File:Cat_Domestic.jpg" target="_blank"><img src="https://static.markasutter.com/static/img/960-Cat_Domestic.jpg" decoding="async" loading="lazy=" alt="A beautiful cat!" title="Source: https://commons.wikimedia.org/wiki/File:Cat_Domestic.jpg"/></a>
+This site is under construction, but feel free to browse around! 
 
-First paragraph is not latin!
+<a href="https://commons.wikimedia.org/wiki/File:Cat_Domestic.jpg" target="_blank"><img src="https://static.markasutter.com/static/img/960-Cat_Domestic.jpg" decoding="async" loading="lazy=" alt="A beautiful cat!" title="Source: https://commons.wikimedia.org/wiki/File:Cat_Domestic.jpg"/></a>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ligula dolor, vehicula eu augue non, auctor cursus ex. Fusce vitae gravida eros. Aenean a gravida purus. Vestibulum fermentum molestie libero ut vestibulum. Vivamus sit amet sodales felis, vel luctus leo. Vivamus ultrices nisl vel leo feugiat, in faucibus ipsum auctor. Fusce dictum lobortis nibh. Phasellus aliquam malesuada dolor non hendrerit. Donec vel hendrerit erat. Praesent dictum dignissim massa, sed commodo diam iaculis et. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque sapien purus, fermentum id maximus eget, euismod ut nunc. Integer et lectus ipsum. Aenean et felis magna.
 Ut vitae efficitur lorem. Phasellus non elit sed velit rhoncus pulvinar dictum vel arcu. Nunc at rhoncus turpis, at pulvinar nibh. Nunc dignissim urna et orci finibus, a iaculis velit vulputate. Ut sit amet justo hendrerit, congue justo quis, hendrerit ante. Cras scelerisque nunc at tellus ullamcorper semper eu eu nulla. Nunc at vulputate eros.

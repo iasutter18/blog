@@ -20,19 +20,32 @@ pub struct Page {
 * TODO: Write tests where appropriate.
 */
 impl Page {
-    pub async fn load_by_slug(slug: String, db: DbConn) -> Result<Template, NotFound<Template>> {
-        let page = Self::load_from_db(slug.to_string(), db).await;
+    pub async fn load_by_slug_optkey(slug: String, key: Option<String>, db: DbConn) -> Result<Template, NotFound<Template>> {
+        let page = match key {
+            Some(k) => Self::load_from_db_withkey(slug, k, db).await,
+            None => Self::load_from_db(slug, db).await
+        };
         match page {
             Ok(page) => Ok( Template::render("base", context!{ page }) ),
             Err(e) => Err( error404( &e.to_string() ) )
         }
     }
     async fn load_from_db(slug: String, db: DbConn) -> Result<Self, Error> {
-        let q = "select * from pages where slug = ?1";
+        let q = "select * from pages where slug = ?1 and (preview_key is null or preview_key = '')";
         db.run(move 
             |c| c.query_row(
                 q,
                 params![slug],
+                Self::parse_db_row
+        ))
+        .await
+    }
+    async fn load_from_db_withkey(slug: String, key: String, db: DbConn) -> Result<Self, Error> {
+        let q = "select * from pages where slug = ?1 and preview_key = ?2";
+        db.run(move 
+            |c| c.query_row(
+                q,
+                params![slug, key],
                 Self::parse_db_row
         ))
         .await
@@ -61,4 +74,4 @@ impl Page {
             }
         }
     }
-}   
+}

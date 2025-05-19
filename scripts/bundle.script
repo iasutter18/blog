@@ -9,7 +9,7 @@ podman machine start
 cross build --release --target x86_64-unknown-linux-gnu
 
 mv templates/style.css.hbs templates/devstyle.css.hbs
-./lightningcss1,29,3 templates/devstyle.css.hbs -m -o templates/style.css.hbs
+./lightningcss1,30,0 templates/devstyle.css.hbs -m --targets "since 2015" -o templates/style.css.hbs
 tar -cvzf "${PKG}.tar.gz" "${ASSETS[@]}" -C "${BUILD_DIR}" "${PKG}"
 rm templates/style.css.hbs
 mv templates/devstyle.css.hbs templates/style.css.hbs

@@ -10,13 +10,17 @@ mod routes;
 use routes::*;
 mod pages;
 mod err_handling;
+use err_handling::not_found;
 
 #[launch]
 async fn start() -> _ {
     rocket::build()
-        .mount("/", routes![index, toplevel_pages])       
+        .mount("/", routes![index, toplevel_pages, preview_toplevel_pages])       
         .mount("/static", FileServer::from("./static")) 
-        .attach(Template::fairing())
+        .register("/", catchers![not_found])
+        //.attach(Template::fairing())
         .attach(DbConn::fairing())
+        .attach(Template::custom(|engines| {
+            engines.handlebars.register_helper( "is_active", Box::new(is_active) );
+        }))
 }
- 
